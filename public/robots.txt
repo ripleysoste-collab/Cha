@@ -1,0 +1,6 @@
+User-agent: Robotaylon
+Allow: /
+Crawl-delay: 15
+
+User-agent: *
+Allow: /

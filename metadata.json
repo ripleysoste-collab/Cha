@@ -1,0 +1,6 @@
+{
+  "name": "Paleta Cromática & Web Rápida",
+  "description": "Aplicación rápida de fondo blanco con paleta de tres colores: amarillo, azul y negro, nombres continuos, códigos cromáticos y configuración de robots.txt.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
