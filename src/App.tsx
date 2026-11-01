@@ -45,6 +45,42 @@ export default function App() {
       className="min-h-screen w-full transition-colors duration-300 flex flex-col items-center pt-8 px-4 selection:bg-transparent"
       style={{ backgroundColor: currentBg }}
     >
+      {/* Logo de la plataforma */}
+      <div className="mb-4">
+        <button
+          onClick={() => setActiveColor(null)}
+          title="Restablecer a fondo blanco"
+          className="flex items-center gap-2.5 px-3 py-1.5 rounded-2xl transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer shadow-xs border"
+          style={{
+            backgroundColor: activeColor ? (currentTextColor === '#FFFFFF' ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.06)') : '#FFFFFF',
+            borderColor: activeColor ? (currentTextColor === '#FFFFFF' ? 'rgba(255,255,255,0.25)' : 'rgba(0,0,0,0.12)') : '#E4E4E7',
+            backdropFilter: 'blur(8px)',
+          }}
+        >
+          {/* Logo Icon SVG */}
+          <div className="w-7 h-7 relative flex items-center justify-center">
+            <svg viewBox="0 0 100 100" className="w-full h-full drop-shadow-xs" fill="none">
+              <circle cx="50" cy="50" r="46" stroke="currentColor" strokeWidth="3" opacity="0.25" style={{ color: currentTextColor }} />
+              {/* Yellow Dot */}
+              <circle cx="50" cy="28" r="14" fill="#FACC15" stroke="#CA8A04" strokeWidth="1.5" />
+              {/* Blue Dot */}
+              <circle cx="31" cy="65" r="14" fill="#2563EB" stroke="#1D4ED8" strokeWidth="1.5" />
+              {/* Black Dot */}
+              <circle cx="69" cy="65" r="14" fill="#0A0A0A" stroke="#52525B" strokeWidth="1.5" />
+              {/* Center Pivot */}
+              <circle cx="50" cy="50" r="4" fill="#FFFFFF" stroke="#71717A" strokeWidth="1.5" />
+            </svg>
+          </div>
+
+          <span
+            className="font-bold text-xs tracking-wider uppercase font-mono transition-colors duration-300"
+            style={{ color: currentTextColor }}
+          >
+            Tríada
+          </span>
+        </button>
+      </div>
+
       {/* Arribita: Nombre del color activo */}
       <div className="h-10 flex items-center justify-center mb-4">
         {currentName ? (
